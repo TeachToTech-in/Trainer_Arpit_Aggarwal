@@ -1,4 +1,4 @@
-# Session 3
+# Session 3 - Operators in Java
 ## Operators
 - Operator is a symbol which performs some operation on operands
 ```java
@@ -15,6 +15,7 @@
 	    	5) new operator
 	    	6) dot (.)  operator
 	    	7) ternary operator ( Conditional Operator )
+	    	8) Bitwise Operator
 ### Arithmetic Operators
 - Arithmetic Operators are used to perform Arithmetic Operations ( Calculations )
 
@@ -166,3 +167,7 @@
 		13. ||                             → Logical OR
 		14. ?:                             → Ternary operator
 		15. =  +=  -=  *=  /=  %=          → Assignment operators
+### Assignments (LeetCode)
+1. [Single Number](https://leetcode.com/problems/single-number/)
+2. [Plus One](https://leetcode.com/problems/plus-one/)
+

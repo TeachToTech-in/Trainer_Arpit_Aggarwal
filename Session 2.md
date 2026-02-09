@@ -1,10 +1,10 @@
-# Session 2
+# Session 2 - Data Types, Variables & Type Casting
 ## Data Types
 - Data types are used to specify type of the data
 - Data types are divided into 2 categories
 
     	1) Primitive / Pre-Defined Data Types
-    		2) Integral Data Types
+			1) Integral Data Types
     			- byte
     			- short
     			- int
@@ -22,10 +22,8 @@
     		- Strings
     		- Classes
 ### Integral Data Types
-
 - Integral data types are used to store numbers without decimal points
 - We can store both positive and negative numbers using integral data types
-
 ```java
 	// Intergral Data Type
 	age = 30;
@@ -36,10 +34,10 @@
 - We have 4 data types in this category
 - For These 4 data types memory & range is different
 
-	    	1)  byte   ----> default value is 0  ----> 1 byte
-	    	2)  short	----> default value is 0  ----> 2 bytes
-	    	3)  int    ----> default value is 0  ----> 4 bytes
-	    	4)  long   ----> default value is 0l   ----> 8 bytes
+	    	1)  byte   ---->  default value is 0  ---->  1 byte
+	    	2)  short	---->  default value is 0  ---->  2 bytes
+	    	3)  int    ---->  default value is 0  ---->  4 bytes
+	    	4)  long   ---->  default value is 0l   ---->  8 bytes
 ### Decimal Data Types
 - Decimal data types are used to store numbers with decimal values
 - We can store both postive and negative values
@@ -67,7 +65,6 @@
 	gender = 'm';
 	rank = '1';
 ```
-
 **Note: In C language 'char' will take only 1 byte where as in java 'char' will take 2 bytes**
 ### Boolean Data Type
 - It is used to store true or false values only

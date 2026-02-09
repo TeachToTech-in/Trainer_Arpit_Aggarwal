@@ -1,11 +1,11 @@
-# Session 1
+# Session 1 - Introduction to Java
 ## What is Java ?
 - Java is a programming language
 - Java developed by James Gosling & his team in 1991 at Sun Microsystems
 - Initially they named it as `OAK` programming language
 - In 1995, OAK language renamed to Java
 - Oracle Corporation acquired Sun Microsystem in 2010
-- Now java is under license of Oracle corporation.
+- Now java is under license of Oracle corporation
 - Java is a free & open-source software
 - 3 billion devices run on Java language
 - Java is one of the most popular languages in the world
@@ -17,7 +17,7 @@
 
 		Eg: Pointers and Operator Overloading are not there in java
 #### Platform Independent
-- Unlike other programming languages such as C, C++ etc which are compiled into platform specific machines. Java is guaranteed to be write-once, run- anywhere language.
+- Unlike other programming languages such as C, C++ etc which are compiled into platform specific machines. Java is guaranteed to be write-once, run-anywhere language.
 - When we compile java code it will generate bytecode. This bytecode is platform independent and can be run on any machine, plus this bytecode format also provide security. Any machine with Java Runtime Environment can run Java Programs.
 
 ![Platform Independent](java-assets/platform-independent.png)
@@ -51,9 +51,9 @@
 - JRE providing a platform to run our java programs
 - JVM will take care of program execution
 ## Java program Execution Flow
-**Step-1:** We will write source code and we will save that code in a file using .java extension
+**Step-1:** We will write source code and we will save that code in a file using `.java` extension
 **Step-2:** We will compile source code using java compiler (it will generate byte code)
-**Step-3:** We will execute .class file ( JVM will convert byte code into machine code & gives output)
+**Step-3:** We will execute `.class` file ( JVM will convert byte code into machine code & gives output)
 
 ![Java Program Execution Flow](java-assets/java-program-execution-flow.png)
 ## Bytecode
@@ -88,15 +88,16 @@
 ## Environment Setup (Java Installation)
 #### Step- 1) Download and Install Java Software
 ![Java Download](java-assets/download-java.png)
-- After installing java, we can see below two folders (JDK & JRE)
+- After installing java, we can see below folder (JDK)
 ![Java Installation](java-assets/java-installation.png)
+**Note: If you installed java first time you'll see only one folder containing the version you installed. (Here Java 17 is previously installed on this system that's why there are two folders)**
 **Note: After installing java software, we need to set PATH for java software to use it.**
 #### Step-2) Set Path for Java
 - Go To Environment Variables
 - Go To System Environment Variables
 - Edit Path
 - Add path up to JDK bin directory
-			Path = C:\Program Files\Java\jdk1.8.0_202\bin
+			Path = C:\Program Files\Java\jdk-25\bin
 
 ![Java Path Setup](java-assets/java-path-setup.png)
 #### Step-3) Verify PATH Setup
