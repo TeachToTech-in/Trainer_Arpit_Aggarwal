@@ -142,7 +142,7 @@
 ### instanceof Operator
 - It is used to check object reference belong to a class or not
 ```java
-	String str = "ashokit";
+	String str = "Hi";
 	if (str instanceof String ) {
 		//logic
 	}
