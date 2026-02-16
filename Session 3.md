@@ -153,7 +153,7 @@
 - Assignment operators have the lowest precedence
 
 		1. ()                              → Parentheses
-		2. ++  --                          → Postfix increment, decrement
+		2. ++  --                          → increment, decrement
 		3. ++  --  +  -  !  ~              → Unary operators
 		4. *  /  %                         → Multiplication, Division, Modulus
 		5. +  -                            → Addition, Subtraction

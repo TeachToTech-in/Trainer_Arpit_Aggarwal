@@ -15,7 +15,7 @@
 #### Simple
 - Java is easy to learn and its syntax is quite simple, clean and easy to understand. The confusing and ambiguous concepts of C++ are either left out in Java or they have been re-implemented in a cleaner way.
 
-		Eg: Pointers and Operator Overloading are not there in java
+			Eg: Pointers and Operator Overloading are not there in java
 #### Platform Independent
 - Unlike other programming languages such as C, C++ etc which are compiled into platform specific machines. Java is guaranteed to be write-once, run-anywhere language.
 - When we compile java code it will generate bytecode. This bytecode is platform independent and can be run on any machine, plus this bytecode format also provide security. Any machine with Java Runtime Environment can run Java Programs.

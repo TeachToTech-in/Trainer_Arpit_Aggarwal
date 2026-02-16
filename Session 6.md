@@ -105,6 +105,19 @@
 **Note: Array size should be positive integer only**
 - Decimal value can't be used for Array Size
 - Negative value also can't be used for Array Size
+## for-each loop
+- for-each loop is used to iterate arrays and collections
+```java
+	// for-each loop example
+	class ArrayDemo {
+		public static void main(String... args) {
+			int arr [ ]  = { 101, 102, 103, 104 } ;
+			for (int temp : arr){
+				System.out.println(temp);
+			}
+		}
+	}
+```
 ## Types of Arrays
 - Arrays are divided into 2 types
 ```java
@@ -113,5 +126,106 @@
 	// 2) Multi Dimensional Array
 		int arr[ ][ ] = new int[rowsSize][columnsSize];
 ```
+## 2D Arrays
+- 2D arrays are having rows and columns
+- Each row of 2D array is a 1D array
+```java
+	// Multi-Dimensional Arrays Demo
+	class TwoDimensionArray{
+		public static void main(String... args){
+			int arr [ ] [ ] = new int [ 2 ] [ 2 ];
+			arr [0] [0] = 100 ;
+			arr [0] [1] = 200;
+			arr [1] [0] = 300;
+			arr [1] [1] = 400;
+			for (int i = 0; i < arr.length ; i ++ ){
+				for ( int j = 0; j <arr.length ; j ++ ){
+					System.out.println(arr[i][j]);
+				}
+			}
+		}
+	}
+```
 
+```java
+	// Iterating 2D array using for-each loop
+	public class Demo {
+		public static void main(String[] args) {
+			int arr[][] = { { 100, 200 }, { 300, 400 } };
+
+			for (int[] ar : arr) {
+				for(int x : ar) {
+					System.out.println(x);
+				}
+			}
+		}
+	}
+```
+
+```java
+	// Converting Array to String
+	import java.util.Arrays;
+	
+	public class Demo {
+		public static void main(String[] args) {
+			int arr[][] = { { 100, 200 }, { 300, 400 } };
+			
+			for (int[] temp : arr) {
+				System.out.println(Arrays.toString(temp));
+			}
+		}
+	}
+```
+
+```java
+	// Add Two Matrix
+	import java.util.Scanner;
+	
+	public class MatrixAddition {
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        
+	        System.out.print("Enter number of rows: ");
+	        int rows = sc.nextInt();
+	        
+	        System.out.print("Enter number of columns: ");
+	        int cols = sc.nextInt();
+	        
+	        int[][] matrix1 = new int[rows][cols];
+	        int[][] matrix2 = new int[rows][cols];
+	        int[][] result = new int[rows][cols];
+	        
+	        System.out.println("Enter elements of first matrix:");
+	        for(int i = 0; i < rows; i++) {
+	            for(int j = 0; j < cols; j++) {
+	                matrix1[i][j] = sc.nextInt();
+	            }
+	        }
+	        
+	        System.out.println("Enter elements of second matrix:");
+	        for(int i = 0; i < rows; i++) {
+	            for(int j = 0; j < cols; j++) {
+	                matrix2[i][j] = sc.nextInt();
+	            }
+	        }
+	        
+	        // Adding matrices
+	        for(int i = 0; i < rows; i++) {
+	            for(int j = 0; j < cols; j++) {
+	                result[i][j] = matrix1[i][j] + matrix2[i][j];
+	            }
+	        }
+	        
+	        System.out.println("Result :");
+	        for(int i = 0; i < rows; i++) {
+	            for(int j = 0; j < cols; j++) {
+	                System.out.print(result[i][j] + " ");
+	            }
+	            System.out.println();
+	        }
+	        
+	        sc.close();
+	    }
+	}
+```
 

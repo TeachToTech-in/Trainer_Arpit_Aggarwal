@@ -84,7 +84,7 @@
 - For primitive data types memory will be inside stack
 - For referenced data types memory will be allocated inside heap
 ## Type Casting
-- Type casting in Java is the process of converting one data type into another
+- Type casting is the process of converting one type of value into another
 - Java supports two types of type casting:
 
 			Implicit Type Casting (Widening)
