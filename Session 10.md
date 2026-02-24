@@ -172,6 +172,7 @@
 		}
 	}
 	
+	// It will not execute, not allowed in Java
 	public class Demo extends A, B {
 		public static void main(String[] args) {
 			Demo d = new Demo();
@@ -330,25 +331,6 @@ When we call a method using Object, first it will check in current class for tha
 	    }
 	}
 ```
-## Type casting w.r.t reference types
-- It means means converting the object from one reference type to another reference type
-- It is having two types
-
-		1) Upcasting
-		2) Downcasting
-### Upcasting
-- Up casting means storing the child class object into the parent class reference
-```java
-	Parent p = new Child();
-```
-### Downcasting
-- Down casting means storing the Parent class object into the child class reference
-```java
-	Parent p = new Child();
-	Child c = (Child) p;
-```
-
-**Note: Downcasting will only work, if parent class reference holding child class object.**
 ## final keyword
 - final is a reserved keyword in java
 - We can use final keyword at 3 places

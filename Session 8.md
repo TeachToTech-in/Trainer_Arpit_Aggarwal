@@ -49,7 +49,7 @@
     	3) local variables
 ### Instance Variables
 - Variables which are declared inside the class and outside the method are called as instance variables
-- instance variables can be accessed by all the methods available in the class thats why the are called as Global Variables
+- instance variables can be accessed by all the methods available in the class thats why these are called as Global Variables
 - Instance variables are called as object variables
 - When we create the object, then only memory will be allocated for instance variables
 - Every Object will maintain its own copy of the instance variable
