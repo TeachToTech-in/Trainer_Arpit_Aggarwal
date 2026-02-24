@@ -1,4 +1,4 @@
-# Session 3 - Operators in Java
+.# Session 3 - Operators in Java
 ## Operators
 - Operator is a symbol which performs some operation on operands
 ```java

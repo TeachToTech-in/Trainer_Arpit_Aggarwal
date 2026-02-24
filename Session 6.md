@@ -13,10 +13,11 @@
 
 	// Array Creation
 	variableName = new datatype [ size ] ;
-	datatype[ ] variableName = new datatype [ size ] ;\
+	datatype[ ] variableName = new datatype [ size ] ;
 	int[ ]  arr = new int [ 5 ];
 ```
 **Note: At the time of creating the array the size is mandatory**
+
 - Array Size represents how many values we can store into Array
 - Array will store the data based on indexes
 - Array index always will start from zero

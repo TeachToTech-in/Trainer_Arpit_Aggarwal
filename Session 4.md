@@ -94,7 +94,6 @@
 		When above both conditions are failed then display msg as 'a is zero'
 
 #### else-if ladder
-
 ```java
 	// else-if ladder syntax
 	if ( condition_1 ) {

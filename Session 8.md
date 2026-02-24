@@ -166,7 +166,7 @@
 - Methods are divided into 2 types
 
 		1) instance methods   ---> Object level methods
-    	1) static methods ----> Class level method
+    	2) static methods ----> Class level method
 
 - instance method will be called by using Object
 - static method will be called by using Class

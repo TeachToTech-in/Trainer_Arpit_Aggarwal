@@ -14,7 +14,7 @@
 	// approach - 1  (string literal)
 	String  name = "arpit";
 	
-	// approach -2 (using new operator)
+	// approach - 2 (using new operator)
 	String str = new String ("arpit");
 ```
 ## String Constant Pool
@@ -43,7 +43,7 @@
 	}
 ```
 
-- If we create String objects using 'new' operator always new object will be created in Heap area.
+- If we create String objects using `new` operator always new object will be created in Heap area.
 
 ```java
 	class StringDemo {
