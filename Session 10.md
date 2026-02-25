@@ -347,7 +347,7 @@ When we call a method using Object, first it will check in current class for tha
 - final variables are nothing but constants
 - Final variable value can't be modified
 ```java
-	public final int pi = 3.14;
+	public final double pi = 3.14;
 	pi = 4.32; // invalid
 ```
 - final methods can't be overridden. We can't override final methods

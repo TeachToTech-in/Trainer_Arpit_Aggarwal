@@ -73,7 +73,7 @@
 				s.length(); // NPE
 				System.out.println("try block end");
 			} catch (Exception e) {
-				System.out.println("in catch block");
+				System.out.println("catch block");
 				e.printStackTrace();
 			}
 			System.out.println("main( ) method ended...");
@@ -83,7 +83,6 @@
 
 ```java
 	// We can write one try block with multiple catch blocks also like below
-	
 	public class Demo {
 		public static void main(String[] args) {
 			System.out.println("main( ) method started...");
@@ -93,7 +92,7 @@
 				int i = s.length();
 				System.out.println("try block end");
 			} catch (ArithmeticException e) {
-				System.out.println("in catch block");
+				System.out.println("catch block");
 				e.printStackTrace();
 			} catch (NullPointerException e) {
 				e.printStackTrace();
@@ -113,19 +112,18 @@
 - finally block will execute always (irrespective of the exception)
 ```java
 	// java program with try-catch-finally scenario
-	
 	public class Demo {
 		public static void main(String[] args) {
 			System.out.println("main( ) method started...");
 			try {
-				System.out.println("try block - start");
+				System.out.println("try block start");
 				int i = 10 / 2;
-				System.out.println("try block - end");
+				System.out.println("try block end");
 			} catch (Exception e) {
 				System.out.println("catch block");
 				e.printStackTrace();
 			} finally {
-				System.out.println("finally - block");
+				System.out.println("finally block");
 			}
 			System.out.println("main( ) method ended...");
 		}
@@ -169,8 +167,6 @@
 ```
 
 ```java
-	package in.ashokit;
-	
 	public class Demo {
 		public String getName(int id) throws Exception {
 			if (id == 100) {
@@ -221,8 +217,6 @@
 			super(msg);
 		}
 	}
-
-	package in.ashokit;
 
 	public class Demo {
 		private String getName(int id) {

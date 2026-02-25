@@ -68,40 +68,74 @@
 **Note: One java class can implement Multiple Interfaces at a time.**
 
 ```java
+	// Payment interface
+	interface Payment {
+	    void pay(double amount);   // abstract method
+	}
+	
+	// CreditCardPayment class implementing Payment interface
+	class CreditCardPayment implements Payment {
+	    public void pay(double amount) {
+	        System.out.println("Credit Card Payment");
+	    }
+	}
+	
+	// UPIPayment class implementing Payment interface
+	class UPIPayment implements Payment {
+	    public void pay(double amount) {
+	        System.out.println("UPI Payment");
+	    }
+	}
+	
+	// Main class
+	public class Main {
+	    public static void main(String[] args) {
+	        Payment p1 = new CreditCardPayment();
+	        p1.pay(1000);
+	        
+	        Payment p2 = new UPIPayment();
+	        p2.pay(500);
+	    }
+	}
+```
+
+**Note: Interface reference variable can hold its implementation class object.**
+
+```java
 	// Interface example
 	public interface Bank {
 		public void moneyTransfer();
 		public void checkBalance();
 	}
-
+	
 	public class HdfcBank implements Bank {
 		public void moneyTransfer() {
 			System.out.println("Money Transfer from HDFC....");
 		}
-
+		
 		public void checkBalance() {
 			System.out.println("Checking Balance from HDFC.....");
 		}
 	}
-
+	
 	public class AxisBank implements Bank {
 		public void moneyTransfer() {
 			System.out.println("Money Transfer from Axis ....");
 		}
-
+		
 		public void checkBalance() {
 			System.out.println("Check Balance from Axis....");
 		}
 	}
-
+	
 	public class BankDemo {
 		public static void main(String[] args) {
 			Bank b; // reference variable
-
+			
 			b = new AxisBank(); // storing impl obj into ref variable
 			b.moneyTransfer(); // axis-bank method will be called
 			b.checkBalance(); // axis-bank method will be called
-
+			
 			b = new HdfcBank();  // storing impl obj into ref variable
 			b.moneyTransfer(); // hdfc-bank method will be called
 			b.checkBalance(); // hdfc-bank method will be called
@@ -109,9 +143,6 @@
 	}
 ```
 
-**Note: Interface reference variable can hold its implementation class object.**
-
-- When method is taking interface as parameter that means that method is expecting interface implementation class object as parameter
 - In Interface we can declare variables also, by default they are public static final
 ```java
 	public interface Bank {
