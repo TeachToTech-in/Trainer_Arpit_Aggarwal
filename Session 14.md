@@ -16,7 +16,7 @@
 		1) Reader classes (Ex: FileReader)
 		2) Writer classes (Ex: FileWriter)
 
-![IO Streams](assets/io-streams.png)
+![IO Streams](java-assets/io-streams.png)
 ## Byte Stream
 - The byte stream deals with mainly byte data
 - We know that one byte is equal to eight-bit

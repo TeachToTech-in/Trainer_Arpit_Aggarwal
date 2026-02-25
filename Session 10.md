@@ -148,7 +148,7 @@
     		3) Multiple --------> Not supported by Java due to Ambiguity problem
     		4) hierarchical
 
-![Types of Inheritance height](assets/types-of-inheritance.png)  
+![Types of Inheritance height](java-assets/types-of-inheritance.png)  
 
 **Single level :** Class B extends Class A
 
