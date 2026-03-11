@@ -99,7 +99,7 @@
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			System.out.println("main( ) method ended...");
+			System.out.println("main() method ended...");
 		}
 	}
 ```
@@ -161,7 +161,7 @@
 	}
 ```
 ### throw
-- throw keyword is used to create the exception
+- throw keyword is used to explicitly throw an exception
 ```java
 	throw new Exception("Msg");
 ```
@@ -236,9 +236,9 @@
 	}
 ```
 ## JVM Reaction to Exceptions
-- When an error (exception) happens, the program stops running normally
-- The JVM creates an exception object that stores information about the error
-- The JVM looks for a `catch` block to handle the error
+- When an exception occurs, the program stops running normally
+- The JVM creates an exception object that stores information about the exception
+- The JVM looks for a `catch` block to handle the exception
 - It checks the current method first
 - If not found, it goes back to the previous method (this is called stack unwinding) 
 - It continues checking methods one by one

@@ -48,15 +48,15 @@
 	
 	public class Person {
 		public static void speak() {
-			System.out.println("Hi, i am ashok");
+			System.out.println("Hi, I am Arpit");
 		}
 		
 		public static void m1() {
-			System.out.println("hi, i am from m1()");
+			System.out.println("Hi, I am from m1()");
 		}
 		
 		public static void m2() {
-			System.out.println("hi, i am from m2()");
+			System.out.println("Hi, I am from m2()");
 		}
 	}
 ```
@@ -109,7 +109,7 @@
 
 ```bash
 	// Syntax to create a jar file
-	jar  cf  <filename.jar> <package-name>
+	jar  cf  <filename.jar> <class-name>
 ```
 
 			c - create
