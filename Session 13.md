@@ -189,7 +189,7 @@
 	}
 ```
 ## Exception Hierarchy
-![Exception Class](assets/exception-hierarchy.png)
+![Exception Class](java-assets/exception-hierarchy.png)
 ## User Defined Exceptions
 - In java language we have several pre-defined exception classes
 
