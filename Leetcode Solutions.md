@@ -1,6 +1,5 @@
 # Leetcode Solutions
-## Session 1
-### [Two Sum](https://leetcode.com/problems/two-sum/)
+### Problem 1 - [Two Sum](https://leetcode.com/problems/two-sum/)
 ```java
 	// Leetcode Two Sum
 	class Solution {
@@ -16,7 +15,7 @@
 	    }
 	}
 ```
-### [Power of Two](https://leetcode.com/problems/power-of-two)
+### Problem 2 - [Power of Two](https://leetcode.com/problems/power-of-two)
 ```java
 	// Leetcode Power of Two
 	class Solution {

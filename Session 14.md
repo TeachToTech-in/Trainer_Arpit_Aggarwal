@@ -111,3 +111,5 @@
 ```
 
 **Note: FileReader will read the data character by character where as BufferedReader will read the data Line by Line.**
+
+

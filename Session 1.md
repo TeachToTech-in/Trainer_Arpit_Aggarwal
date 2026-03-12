@@ -105,6 +105,4 @@
 
 ![Verify Path](java-assets/verify-path.png)
 **Note: If you are getting message like above that means, java installation and PATH setup is success.**
-### Assignments (LeetCode)
-1) [Two Sum](https://leetcode.com/problems/two-sum/)
-2) [Add Digits](https://leetcode.com/problems/add-digits/)
+

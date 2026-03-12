@@ -173,6 +173,6 @@
 	    }
 	}
 ```
-## Assignments (LeetCode)
-1) [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
-2) [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+
+
+

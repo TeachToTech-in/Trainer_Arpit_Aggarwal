@@ -188,6 +188,8 @@
 		}
 	}
 ```
+## Exception Hierarchy
+![Exception Class](assets/exception-hierarchy.png)
 ## User Defined Exceptions
 - In java language we have several pre-defined exception classes
 
@@ -244,3 +246,5 @@
 - It continues checking methods one by one
 - If a matching `catch` block is found, the error is handled there
 - If no `catch` block is found, the JVM prints the error message and stops the program
+
+
