@@ -244,7 +244,7 @@
 - It checks the current method first
 - If not found, it goes back to the previous method (this is called stack unwinding) 
 - It continues checking methods one by one
-- If a matching `catch` block is found, the error is handled there
-- If no `catch` block is found, the JVM prints the error message and stops the program
+- If a matching `catch` block is found, the exception is handled there
+- If no `catch` block is found, the JVM prints the exception message and stops the program
 
 

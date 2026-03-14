@@ -33,10 +33,11 @@
 	        FileInputStream fis = new FileInputStream("input.txt");
 	        FileOutputStream fos = new FileOutputStream("output.txt");
 	        
-	        int data;
+	        int data = fis.read();
 	        
-	        while ((data = fis.read()) != -1) {
+	        while (data != -1) {
 		        fos.write(data);
+		        data = fis.read();
 	        }
 	        
 	        System.out.println("File copied successfully!");
@@ -48,13 +49,12 @@
 	}
 ```
 ## Character Stream
-- There is also Character Stream which allows I/O operation on 16bit of Unicode data at a time
+- Character Stream which allows I/O operation on 16bit of Unicode data at a time
 - Character Stream takes 2 bytes of data at a time
 - It is faster as it can take double the intake as compared to a byte stream
 - Character streams usually use Byte Stream classes to implement operations
 ```java
 	// Java Program to write the data to a file using FileWriter class
-	
 	import java.io.*;
 	
 	public class Demo {
@@ -62,54 +62,31 @@
 			
 			FileWriter  fw = new FileWriter("data.txt");
 			fw.write("Hi, good evening");
-			fw.write("\n");  // it represents new line
-			fw.write("How are you?");
-			fw.flush ( );
-			fw.close( ) ;
+			fw.flush();
+			fw.close() ;
 		}
 	}
 ```
 
 ```java
 	// Java program to read file data using FileReader class
-	
 	import java.io.*;
 	
 	public class Demo {
 		public static void main(String... args) throws IOException {
-			FileReader fr = new FileReader ("data.txt");
-			int  i = fr.read ( );
+			FileReader fr = new FileReader("test.txt");
+			int  i = fr.read();
 			
-			while ( i != -1 ){
-				System.out.print( (char) i );
-				i = fr.read ( );	// read next character and re-initialize i var
+			while(i != -1){
+				System.out.print((char) i);
+				i = fr.read();	// read next character and re-initialize i var
 			}
+			
 			fr.close ( );
 		}
 	}
 ```
 
-```java
-	// Java Program to read file data using BufferedReader
-	
-	import java.io.*;
-	
-	public class Demo {
-		public static void main(String... args) throws IOException {
-			FileReader fr = new FileReader("data.txt");
-			
-			BufferedReader br = new BufferedReader(fr);
-			
-			String line = br.readLine ( ); // reading first line data
-			
-			while ( line != null ) {
-				System.out.println( line );
-				line = br.readLine ( ) ; // reading next line and re-initialzing line variable
-			}
-		}
-	}
-```
 
-**Note: FileReader will read the data character by character where as BufferedReader will read the data Line by Line.**
 
 
