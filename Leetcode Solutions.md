@@ -36,24 +36,22 @@
 ### Problem 3 - [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
 ```java
 	// Leetcode Palindrome Number
-	bool isPalindrome(int x) {
-		int digit, rev = 0;
-		int x_save = x;
-		
-		if(x < 0) {
-			return false;
-		}
-		
-		while(x != 0) {
-			digit = x % 10;
-			rev = rev * 10 + digit;
-			x = x / 10;
-		}
-		
-		if(x_save == rev){
-			return true;
-		} else {
-			return false;
+	class Solution {
+		public boolean isPalindrome(int x) {
+			int digit, rev = 0;
+			int x_save = x;
+			
+			if(x < 0) {
+				return false;
+			}
+			
+			while(x != 0) {
+				digit = x % 10;
+				rev = rev*10 + digit;
+				x = x / 10;
+			}
+			
+			return x_save == rev;
 		}
 	}
 ```
@@ -115,8 +113,61 @@
 	}
 ```
 ### Problem 7 - [Single Number](https://leetcode.com/problems/single-number/description/)
-
+```java
+	// Leetcode Single Number
+	class Solution {
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        
+        for(int num : nums) {
+            result = result ^ num;
+        }
+        
+        return result;
+    }
+}
+```
 ### Problem 8 - [Plus One](https://leetcode.com/problems/plus-one/description/)
+```java
+	// Leetcode Plus One
+	class Solution {
+		public int[] plusOne(int[] digits) {
+			int n = digits.length;
+			for(int i = n-1; i >= 0; i--) {
+				if(digits[i] < 9) {
+					digits[i]++;
+					return digits;
+				}
+				digits[i] = 0;
+			}
+			
+			int newDigits[] = new int[n+1];
+			newDigits[0] = 1;
+			return newDigits;
+		}
+	}
+```
 ### Problem 9 - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)
-
+```java
+	// Leetcode Fizz Buzz
+	class Solution {
+		public List<String> fizzBuzz(int n) {
+			List<String> result = new ArrayList<>();
+			
+			for (int i = 1; i <= n; i++) {
+				if (i % 15 == 0) {
+					result.add("FizzBuzz");
+				} else if (i % 3 == 0) {
+					result.add("Fizz");
+				} else if (i % 5 == 0) {
+					result.add("Buzz");
+				} else {
+					result.add(Integer.toString(i));
+				}
+			}
+			
+			return result;
+		}
+	}
+```
 
