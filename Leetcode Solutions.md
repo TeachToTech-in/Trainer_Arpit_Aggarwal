@@ -4,7 +4,7 @@
 	// Leetcode Two Sum
 	class Solution {
 		public int[] twoSum(int[] nums, int target) {
-			for(int i = 0; i < nums.length; i++) {
+			for(int i = 0; i < nums.length - 1; i++) {
 				for(int j = i + 1; j < nums.length; j++) {
 					if(nums[i] + nums[j] == target) {
 						return new int[] {i, j};
@@ -168,6 +168,158 @@
 			
 			return result;
 		}
+	}
+```
+### Problem 10 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+```java
+	// Leetcode Best Time to Buy and Sell Stock
+	class Solution {
+		public int maxProfit(int[] prices) {
+			int minPrice = Integer.MAX_VALUE;
+			int maxProfit = 0;
+			for (int price : prices) {
+				if (price < minPrice) {
+					minPrice = price;
+				} else if (price - minPrice > maxProfit) {
+					maxProfit = price - minPrice;
+				}
+			}
+			return maxProfit;
+		}
+	}
+```
+### Problem 11 - [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)
+```java
+	// Leetcode Valid Anagram
+	class Solution {
+		public boolean isAnagram(String s, String t) {
+			if (s.length() != t.length()) return false;
+			
+			char[] a = s.toCharArray();
+			char[] b = t.toCharArray();
+			
+			Arrays.sort(a);
+			Arrays.sort(b);
+			
+			return Arrays.equals(a, b);
+		}
+	}
+```
+### Problem 12 - [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
+```java
+	// Leetcode First Unique Character in a String
+	class Solution {
+		public int firstUniqChar(String s) {
+			HashMap<Character, Integer> map = new HashMap<>();
+			
+	        for (char c : s.toCharArray()) {
+	            map.put(c, map.getOrDefault(c, 0) + 1);
+	        }
+	        
+	        for (int i = 0; i < s.length(); i++) {
+	            if (map.get(s.charAt(i)) == 1) {
+	                return i;
+	            }
+	        }
+		    return -1;
+	    }
+	}
+```
+### Problem 13 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+```java
+	// Leetcode Move Zeros
+	class Solution {
+	    public void moveZeroes(int[] nums) {
+	        int j = 0;
+	        for (int i = 0; i < nums.length; i++) {
+	            if (nums[i] != 0) {
+	                nums[j++] = nums[i];
+	            }
+	        }
+	        while (j < nums.length) {
+	            nums[j++] = 0;
+	        }
+	    }
+	}
+```
+### Problem 14 - [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+```java
+	// Leetcode Search Insert Position
+	class Solution {
+	    public int searchInsert(int[] nums, int target) {
+	        int low = 0, high = nums.length - 1;
+	        
+	        while (low <= high) {
+	            int mid = low + (high - low) / 2;
+	            
+	            if (nums[mid] == target) {
+	                return mid;
+	            } 
+	            else if (nums[mid] < target) {
+	                low = mid + 1;
+	            } 
+	            else {
+	                high = mid - 1;
+	            }
+	        }
+	        return low;
+	    }
+	}
+```
+### Problem 15 - [Remove Element](https://leetcode.com/problems/remove-element/)
+```java
+	// Leetcode Remove Element
+	class Solution {
+	    public int removeElement(int[] nums, int val) {
+	        int k = 0;
+	        for (int i = 0; i < nums.length; i++) {
+	            if (nums[i] != val) {
+	                nums[k] = nums[i];
+	                k++;
+	            }
+	        }
+	        return k;
+	    }
+	}
+```
+### Problem 16 - [Length of Last Word](https://leetcode.com/problems/length-of-last-word/)
+```java
+	// Leetcode Length of Last Word
+	class Solution {
+	    public int lengthOfLastWord(String s) {
+	        int length = 0;
+	        int i = s.length() - 1;
+	        
+	        while (i >= 0 && s.charAt(i) == ' ') {
+	            i--;
+	        }
+	        
+	        while (i >= 0 && s.charAt(i) != ' ') {
+	            length++;
+	            i--;
+	        }
+	        
+	        return length;
+	    }
+	}
+```
+### Problem 17 - [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)
+```java
+	// Leetcode Richest Customer Wealth
+	class Solution {
+	    public int maximumWealth(int[][] accounts) {
+	        int maxWealth = 0;
+	        
+	        for (int[] customer : accounts) {
+	            int sum = 0;
+	            for (int money : customer) {
+	                sum += money;
+	            }
+	            maxWealth = Math.max(maxWealth, sum);
+	        }
+	        
+	        return maxWealth;
+	    }
 	}
 ```
 
