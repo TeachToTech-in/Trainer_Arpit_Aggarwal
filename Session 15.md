@@ -169,19 +169,18 @@
 	    }
 	}
 	
-		public class InterThreadDemo {
-			public static void main(String[] args) {
-				Shared obj = new Shared();
+	public class InterThreadDemo {
+		public static void main(String[] args) {
+			Shared obj = new Shared();
 				
-				Thread t1 = new Thread(() -> {
-	            obj.waitMethod();
+			Thread t1 = new Thread(() -> {
+			      obj.waitMethod();
 	        });
 	        
 	        Thread t2 = new Thread(() -> {
 	            try {
 	                Thread.sleep(2000); // Delay to show waiting
 	            } catch (Exception e) {}
-	            
 	            obj.notifyMethod();
 	        });
 	        
