@@ -342,4 +342,105 @@
 	    }
 	}
 ```
+### Problem 19 - [Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple/)
+```java
+	// Leetcode Smallest Even Multiple
+	class Solution {
+	    public int smallestEvenMultiple(int n) {
+	        if(n % 2 == 0) {
+	            return n;
+	        } else {
+	            return 2 * n;
+	        }
+	    }
+	}
+```
+### Problem 20 - [Harshad Number](https://leetcode.com/problems/harshad-number/)
+```java
+	// Leetcode Harshad Number
+	class Solution {
+		public int sumOfTheDigitsOfHarshadNumber(int x) {
+			int sum = 0;
+			int x_save = x;
+			
+			while(x != 0) {
+				int digit = x % 10;
+				sum = sum + digit;
+				x = x / 10;
+			}
+			
+			if(x_save % sum == 0) {
+				return sum;
+			} else {
+				return -1;
+			}
+		}
+	}
+```
+### Problem 21 - [Count of Matches in Tournament](https://leetcode.com/problems/count-of-matches-in-tournament/)
+```java
+	// Leetcode Count Matches in Tournament
+	class Solution {
+		public int numberOfMatches(int n) {
+			int matches = 0;
+			
+			while(n > 1) {
+				if(n % 2 == 0) {
+					matches = matches + n / 2;
+					n = n / 2;
+				} else {
+					matches = matches + (n - 1) / 2;
+					n = ((n - 1) / 2) + 1;
+				}
+			}
+			return matches;
+		}
+	}
+```
+### Problem 22 - [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)
+```java
+	// Number of Common Factors
+	class Solution {
+	    public int commonFactors(int a, int b) {
+	        int count = 0;
+	        int min = Math.min(a, b);
+	        
+	        for(int i = 1; i <= min; i++) {
+	            if(a % i == 0 && b % i == 0) {
+	                count++;
+	            }
+	        }
+	        
+	        return count;
+	    }
+	}
+```
+### Problem 23 - [Count Integers With Even Digit Sum](https://leetcode.com/problems/count-integers-with-even-digit-sum/)
+```java
+	// Count Integers with Even Digit Sum
+	class Solution {
+		public int countEven(int num) {
+			int count = 0;
+			
+			for(int i = 1; i <= num; i++) {
+				int sum = 0;
+				int temp = i;
+				
+				while(temp != 0) {
+					int digit = temp % 10;
+					sum = sum + temp;
+					temp = temp / 10;
+				}
+				
+				if(sum % 2 == 0) {
+					count++;
+				}
+			}
+			
+			return count;
+		}
+	}
+```
+
+
 

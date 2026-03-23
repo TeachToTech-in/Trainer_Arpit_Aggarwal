@@ -441,6 +441,23 @@
 	
 	non-sealed class Bike extends Vehicle {}
 ```
+## Enum
+- Enum is special data type in Java
+- It is used to define a set of constants
+- We can use these set of constants as data type in our program
 
+```java
+	// Enum Day
+	enum Day {
+	    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+	}
+	
+	public class Demo {
+	    public static void main(String[] args) {
+	        Day today = Day.MONDAY;
+	        System.out.println(today);
+	    }
+	}
+```
 
 
