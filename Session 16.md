@@ -133,9 +133,9 @@
 	// Stream API Example
 	public class Demo {
 	    public static void main(String[] args) {
-	        List<Integer> numbers = Arrays.asList(5, 12, 8, 20, 3, 15);
+	        Stream st = Stream.of(5, 12, 8, 20, 3, 15);
 	        
-	        long count = numbers.stream()
+	        long count = st
 	                .filter(n -> n > 10)     // Step 1: filter numbers > 10
 	                .map(n -> n * 2)         // Step 2: multiply each by 2
 	                .count();                // Step 3: count elements
