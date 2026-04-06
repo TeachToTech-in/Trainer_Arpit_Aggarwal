@@ -441,7 +441,7 @@
 	
 	non-sealed class Bike extends Vehicle {}
 ```
-## Enum
+## Enum (Enumration)
 - Enum is special data type in Java
 - It is used to define a set of constants
 - We can use these set of constants as data type in our program

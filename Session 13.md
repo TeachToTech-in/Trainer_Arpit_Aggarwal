@@ -15,7 +15,7 @@
 ## Exception vs Error
 - Exception can be handled
 - Error can't be handled
-
+	
 		Ex: Assertion Error, Virtual Machine Error
 ## Exception Types
 - Exceptions are divided into 2 types

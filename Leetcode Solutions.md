@@ -399,7 +399,7 @@
 ```
 ### Problem 22 - [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)
 ```java
-	// Number of Common Factors
+	// Leetcode Number of Common Factors
 	class Solution {
 	    public int commonFactors(int a, int b) {
 	        int count = 0;
@@ -417,7 +417,7 @@
 ```
 ### Problem 23 - [Count Integers With Even Digit Sum](https://leetcode.com/problems/count-integers-with-even-digit-sum/)
 ```java
-	// Count Integers with Even Digit Sum
+	// Leetcode Count Integers with Even Digit Sum
 	class Solution {
 		public int countEven(int num) {
 			int count = 0;
@@ -441,6 +441,197 @@
 		}
 	}
 ```
-
+### Problem 24 - [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/)
+```java
+	// Leetcode Sign of the Product of an Array
+	class Solution {
+		public int arraySign(int[] nums) {
+			int sign = 1;
+			for(int i = 0; i < nums.length; i++) {
+				if(nums[i] == 0) {
+					sign = 0;
+				} else if(nums[i] < 0) {
+					sign = -sign;
+				}
+			}
+			return signFunc(sign);
+		}
+		
+		public static int signFunc(int product) {
+			if(product < 0) {
+				return -1;
+			} else if(product > 0) {
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+	}
+```
+### Problem 25 - [Difference Between Element Sum and Digit Sum](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/)
+```java
+	// Leetcode Difference Between Element Sum and Digit Sum
+	class Solution {
+		public int differenceOfSum(int[] nums) {
+			int elementSum = 0;
+			int digitSum = 0;
+			
+			for(int i = 0; i < nums.length; i++) {
+				elementSum = elementSum + nums[i];
+				int num = nums[i];
+				while(num > 0) {
+					int digit = num % 10;
+					digitSum = digitSum + digit;
+					num = num / 10;
+				}
+			}
+			return elementSum - digitSum;
+		}
+	}
+```
+### Problem 26 - [Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/)
+```java
+	// Leetcode Sum of Digits in Base K
+	class Solution {
+		public int sumBase(int n, int k) {
+			int sum = 0;
+			
+			while(n > 0) {
+				sum += n % k;
+				n = n / k;
+			}
+			
+			return sum;
+		}
+	}
+```
+### Problem 27 - [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)
+```java
+	// Leetcode Maximum 69 Number
+	class Solution {
+		public int maximum69Number (int num) {
+			char[] arr = String.valueOf(num).toCharArray();
+			for(int i = 0; i < arr.length; i++) {
+				if (arr[i] == '6') {
+					arr[i] = '9';
+					break;
+				}
+			}
+			return Integer.parseInt(new String(arr));
+		}
+	}
+```
+### Problem 28 - [Subtract the Product and Sum of Digits](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)
+```java
+	// Leetcode Subtract the Product and Sum of Digits
+	class Solution {
+		public int subtractProductAndSum(int n) {
+			int prod = 1;
+			int sum = 0;
+			
+			while(num > 0) {
+				int digit = num % 10;
+				prod = prod * digit;
+				sum = sum + digit;
+			}
+			
+			return prod - sum;
+		}
+	}
+```
+### Problem 29 - [Ugly Number](https://leetcode.com/problems/ugly-number/)
+```java
+	// Leetcode Ugly Number
+	class Solution {
+		public boolean isUgly(int n) {
+			if (n <= 0) return false;
+			int[] factors = {2, 3, 5};
+			
+			for (int f : factors) {
+				while (n % f == 0) {
+					n /= f;
+				}
+			}
+			
+			return n == 1;
+		}
+	}
+```
+### Problem 30 - [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/)
+```java
+	// Leetcode Number of Good Pairs
+	class Solution {
+		public int numIdenticalPairs(int[] nums) {
+			int count = 0;
+			for(int i = 0; i < nums.length; i++) {
+				for(int j = i+1; j < nums.length; j++) {
+					if(nums[i] == nums[j]) {
+						count++;
+					}
+				}
+			}
+			return count;
+		}
+	}
+```
+### Problem 31 - [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
+```java
+	// Leetcode Find Numbers with Even Number of Digits
+	class Solution {
+		public int findNumbers(int[] nums) {
+			int count = 0;
+			
+			for(int i = 0; i < nums.length; i++) {
+				int num = nums[i];
+				int noOfDigits = 0;
+				
+				while(num > 0) {
+					noOfDigits++;
+					num = num / 10;
+				}
+				
+				if(noOfDigits % 2 == 0) {
+					count++;
+				}
+			}
+			return count;
+		}
+	}
+```
+### Problem 32 - [Final Value of Variable](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)
+```java
+	// Final Value of Variable
+	class Solution {
+		public int finalValueAfterOperations(String[] operations) {
+			int x = 0;
+			
+			for(String op : operations) {
+				if(op.equals("++X") || op.equals("X++")) {
+					x++;
+				} else {
+					x--;
+				}
+			}
+			return x;
+		}
+	}
+```
+### Problem 33 - [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/)
+```java
+	// Leetcode XOR Operation in an Array
+	class Solution {
+		public int xorOperation(int n, int start) {
+			int nums[] = new int[n];
+			int result = 0;
+			
+			for(int i = 0; i < n; i++) {
+				nums[i] = start + 2*i;
+				result = result ^ nums[i];
+			}
+			
+			return result;
+		}
+	}
+```
 
 

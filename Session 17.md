@@ -85,7 +85,7 @@
 			al.add(40)
 			
 			// Using loop
-			for (Object obj : al) {
+			for (Integer obj : al) {
 				System.out.println(obj);
 			}
 			
@@ -167,7 +167,7 @@
 	
 	public class Demo {
 		public static void main(String[] args) {
-			HashSet<String> hs = new HashSet<>(100, 10.05f);
+			HashSet<String> hs = new HashSet<>();
 			
 			hs.add("one");
 			hs.add("two");
@@ -296,7 +296,7 @@
 			System.out.println(map.get(101)); // john
 			System.out.println(map.get(300)); // null
 			
-			for(Entry<Integer,String> entry : entrySet) {
+			for(Entry<Integer,String> entry : map.entrySet()) {
 				System.out.println(entry.getKey()+"--"+entry.getValue());
 			}
 		}
