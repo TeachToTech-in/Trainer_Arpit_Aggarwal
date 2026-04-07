@@ -519,24 +519,61 @@
 			emps.add(new Employee(103, "Cathy", 45000.00));
 			emps.add(new Employee(104, "Anny", 35000.00));
 			
-			// Collections.sort(emps, new EmpIdComparator());
-			// Collections.sort(emps, new EmpNameCompartor());
-			
-			Collections.sort(emps, new Comparator<Employee>() {
-				@Override
-				public int compare(Employee e1, Employee e2) {
-					if (e1.salary > e2.salary) {
-						return -1;
-					} else if (e1.salary < e2.salary) {
-						return 1;
-					} else {
-						return 0;
-					}
-				}
-			});
+			Collections.sort(emps, new EmpIdComparator());
+			Collections.sort(emps, new EmpNameCompartor());
 			
 			for (Employee e : emps) {
 				System.out.println(e);
+			}
+		}
+	}
+```
+
+```java
+	// Creating Comparator using Anonymous Inner Class
+	
+	// Student class
+	public class Student {
+		int id;
+		String name;
+		int rank;
+		
+		public Student(int id, String name, int rank) {
+			this.id = id;
+			this.name = name;
+			this.rank = rank;
+		}
+		
+		@Override
+		public String toString() {
+			return "Student [id=" + id + ", name=" + name + ", rank=" + rank + "]";
+		}
+	}
+	
+	// Main Class
+	import java.util.ArrayList;
+	import java.util.Collections;
+	import java.util.Comparator;
+	import java.util.List;
+	
+	public class Main {
+		public static void main(String[] args) {
+			List<Student> al = new ArrayList<>();
+			
+			al.add(new Student(101, "John", 3));
+			al.add(new Student(104, "Anil", 4));
+			al.add(new Student(102, "Smith", 2));
+			al.add(new Student(103, "Robert", 1));
+			
+			Collections.sort(al, new Comparator<Student>() {
+				@Override
+				public int compare(Student s1, Student s2) {
+					return s1.rank - s2.rank;
+				}
+			});
+			
+			for (Student s : al) {
+				System.out.println(s);
 			}
 		}
 	}

@@ -428,7 +428,7 @@
 				
 				while(temp != 0) {
 					int digit = temp % 10;
-					sum = sum + temp;
+					sum = sum + digit;
 					temp = temp / 10;
 				}
 				
@@ -525,7 +525,7 @@
 ```java
 	// Leetcode Subtract the Product and Sum of Digits
 	class Solution {
-		public int subtractProductAndSum(int n) {
+		public int subtractProductAndSum(int num) {
 			int prod = 1;
 			int sum = 0;
 			
@@ -533,6 +533,7 @@
 				int digit = num % 10;
 				prod = prod * digit;
 				sum = sum + digit;
+				num = num / 10;
 			}
 			
 			return prod - sum;
