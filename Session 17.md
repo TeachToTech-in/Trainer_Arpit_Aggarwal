@@ -38,8 +38,6 @@
 		2) LinkedHashMap
 		3) Hashtable
 		4) TreeMap
-		5) IdentityHashMap
-		6) WeakHashMap
 ## Collection Interface
 - It is super interface for List, Set and Queue
 - Collection interface providing several methods to store and retrieve objects
@@ -118,8 +116,6 @@
 			ll.add(40);
 			
 			System.out.println(ll); // 10, 20, 30, 40
-			ll.add(1, 15);
-			System.out.println(ll); // 10, 15, 20, 30, 40
 		}
 	}
 ```
@@ -181,7 +177,7 @@
 		}
 	}
 ```
-#### LinkedHasSet
+#### LinkedHashSet
 - Implementation class for Set interface
 - Duplicates are not allowed
 - Insertion order will be preserved

@@ -32,6 +32,9 @@
 - Problem 31 - [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
 - Problem 32 - [Final Value of Variable](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)
 - Problem 33 - [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/)
+- Problem 34 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+
+
 
 
 
