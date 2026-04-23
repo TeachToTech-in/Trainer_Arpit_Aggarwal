@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import in.teachtotech.bookapp.entity.Book;
-import in.teachtotech.bookapp.exception.BookNotFoundException;
 import in.teachtotech.bookapp.repository.BookRepository;
 import in.teachtotech.bookapp.service.BookService;
 
