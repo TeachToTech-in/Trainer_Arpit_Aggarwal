@@ -33,6 +33,7 @@
 - Problem 32 - [Final Value of Variable](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)
 - Problem 33 - [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/)
 - Problem 34 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+- Problem 35 - [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
 
 
 

@@ -65,6 +65,8 @@
 - AOP is used to separate cross-cutting logic from business logic
 
 		Eg: We write separte exception handling logic
+## Bean
+- A java class whose life cylce is managed by the spring framework is called as a spring Bean
 ## Bean Scopes
 - Bean scope will decide how many objects should be created for a spring bean
 - The default scope of spring bean is singleton (that means only one object will be created)
@@ -77,7 +79,7 @@
       	5) Application
       	6) WebSocket
 
-- For singleton beans objects will be created when IOC starts
+- For singleton beans only one object will be created
 - For prototype beans every time new object will be created
 - For request scope one bean per request will be created
 - For session scope one bean per session will be created
@@ -162,8 +164,185 @@
 		// logic
 	}
 ```
+## Spring Boot
+- It is another approach to develop spring based applications with less configurations
+- Spring Boot is an enhancement of Spring framework
+- Spring Boot internally uses Spring framework only (Spring Boot is not an replacement for Spring framework)
+- What type of applications we can develop using spring framework, same type of applications can be developed by using Spring boot also
+## Spring Boot Build Systems
+### ### Maven
+- Uses `pom.xml`
+- XML-based configuration
+```xml
+	<!- Example Dependency ->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+```
+### ### Gradle
+- Uses `build.gradle`
+- Groovy/Kotlin-based (cleaner syntax)
+```gradle
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+```
+## Spring Boot Code Structure
+![Spring Boot Code Structure](java-assets/spring-boot-code-structure.png)
+## Spring Boot Runners
+- If we want to execute any logic only once when our application got started then we can use Runners concept
+- Both runners are functional interface. They have only one abstract method i.e run() method
+- In Spring Boot we have 2 types of Runners
 
+      	1) ApplicationRunner
+      	2) CommandLineRunner
+#### Use cases
+		1) send email to management once application started
+		2) read data from static db tables and store into cache memory
 
+```java
+	// Spring Boot app using ApplicationRunner
+	@Component
+	public class CacheManager implements ApplicationRunner {
+		@Override
+		public void run(ApplicationArguments args) throws Exception {
+			System.out.println("Logic executing to load data into cache....");
+		}
+	}
+```
+
+```java
+	// Spring Boot app using CommandLineRunner
+	@Component
+	public class SendAppStartMail implements CommandLineRunner {
+		@Override
+		public void run(String... args) throws Exception {
+			System.out.println("Logic executing to send email....");
+		}
+	}
+```
+## RESTFul Web Services (REST APIs)
+- RESTFul services means one application is communicating with another application
+- Distributed Applications will re-use the services of one application in another application
+## Spring Boot Annotations
+#### @Configuration
+- Marks a class as a source of bean definitions
+```java
+	@Configuration  
+	public class AppConfig {  
+	}
+```
+#### @Bean
+- Declares a bean manually
+```java
+	@Bean  
+	public MyService myService() {  
+	    return new MyService();  
+	}
+```
+#### @Autowired
+- Automatically injects dependencies
+```java
+	@Autowired  
+	private MyService myService;
+```
+#### @Component
+- Generic stereotype for any Spring-managed component
+```java
+	@Component  
+	public class MyComponent {  
+	}
+```
+#### @Service
+- Used for business logic layer
+```java
+	@Service  
+	public class UserService {  
+	}
+```
+#### @Repository
+- Used for DAO layer
+- Handles database exceptions
+```java
+	@Repository  
+	public class UserRepository {  
+	}
+```
+#### @Entity
+- It is used to represent Java class as DB table
+```java
+	@Entity
+	public class Book {
+	}
+```
+#### @Id
+- It is used to represent a field as primary key
+- Id can't have duplicate values
+```java
+	@Entity
+	public class Book {
+		@Id
+		private Integer bookId;
+		private String bookName;
+		private Double bookPrice;
+	}
+```
+#### @RestController
+- Combines `@Controller + @ResponseBody`
+- Returns JSON directly
+```java
+	@RestController  
+	public class ApiController {  
+	}
+```
+#### @RequestMapping
+- Maps HTTP requests
+```java
+	@RequestMapping("/api")
+```
+#### @GetMapping
+- It is used to handle get request
+```java
+	@GetMapping("/users")
+```
+#### @PostMapping
+- It is used to handle post request
+```java
+	@PostMapping("/users")
+```
+#### @PutMapping
+- It is used to handle put request
+```java
+	@PutMapping("/users/{id}")
+```
+#### @DeleteMapping
+- It is used to handle delete request
+```java
+	@DeleteMapping("/users/{id}")
+```
+#### @PathVariable
+- It is used to take the input frpm the url directly
+```java
+	@GetMapping("/users/{id}")  
+	public String getUser(@PathVariable int id) {  
+	    return "User " + id;  
+	}
+```
+#### @RequestParam
+- Extracts values from query parameters
+```java
+	@GetMapping("/search")
+	public String searchUser(@RequestParam String name) {
+	    return "Searching for: " + name;
+	}
+```
+#### @RequestBody
+- Maps JSON request data to Java object
+```java
+	@PostMapping("/users")
+	public User createUser(@RequestBody User user) {
+	    return user;
+	}
+```
 
 
 
